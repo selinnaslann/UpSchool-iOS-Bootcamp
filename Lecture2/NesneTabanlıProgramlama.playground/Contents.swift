@@ -142,7 +142,7 @@ class Fonksiyonlar {
         return toplam
     }
     
-    //Overloading : Metotların aşırı yüklenmesi
+    //Overloading : Metotların aşırı yüklenmesi,fonk isimlerini aynı isimde kullanmamız
     
     func carpma(sayi1:Int,sayi2:Int) {
         print("Çarpma : \(sayi1 * sayi2)")
@@ -270,3 +270,157 @@ print("Film ad : \(f1.film_ad!)")
 print("Film yıl : \(f1.film_yil!)")
 print("Film kategori : \(f1.kategori!.kategori_ad!)")
 print("Film yönetmen : \(f1.yonetmen!.yonetmen_ad!)")
+
+//Kalıtım (Inheritance) : mevcut bir sınıftan başka bir sınıf türetmek için kullanılır.
+// Bir sınıfın tek kalıtımı olabilir.
+// üst sınıfa superclass denir. (özellik aktaran sınıf)
+// Alt sınıfa subclass denir.
+
+class Ev {
+    var pencereSayisi:Int?
+    
+    init(pencereSayisi:Int) {
+        self.pencereSayisi = pencereSayisi
+    }
+}
+
+class Saray : Ev {
+    var kuleSayisi:Int?
+    
+    init(kuleSayisi:Int,pencereSayisi:Int) {
+        self.kuleSayisi = kuleSayisi
+        super.init(pencereSayisi : pencereSayisi) // üst sınıfın özelliğini bu sınıftada kullanabilmek için bunu yaptık.
+    }
+}
+
+class Villa : Ev {
+    var garajVarMi:Bool?
+    
+    init(garajVarMi:Bool,pencereSayisi:Int) {
+        self.garajVarMi = garajVarMi
+        super.init(pencereSayisi : pencereSayisi)
+    }
+}
+
+var topkapiSarayi = Saray(kuleSayisi: 5, pencereSayisi: 300)
+
+var bogazVilla = Villa(garajVarMi: true, pencereSayisi: 30)
+
+print(topkapiSarayi.kuleSayisi!)
+print(topkapiSarayi.pencereSayisi!)
+
+print(bogazVilla.garajVarMi!)
+print(bogazVilla.pencereSayisi!)
+
+//Overriding : metodları ezme,kalıtım ilişkisinde üst sınıfın metodlarının alt sınıf tarafından tekrar kullanılması.
+
+
+class Hayvan {
+    func sesCikar() {
+        print("Sesim yok.")
+    }
+}
+
+class Memeli : Hayvan {
+    
+}
+
+class Kedi : Memeli {
+    override func sesCikar() { // Kedi sınıfı memeli sınıfından, memeli sınıfıda hayvan sınıfından miras aldığı için hayvan sınıfının sesCikar metodunu görebiliyoruz. Buna da override diyoruz. Yani func başında override görüyorsak bir üst sınıfının metodunu kullandığını anlayabiliriz.
+        print("MİYAV")
+    }
+}
+
+class Kopek3 : Memeli {
+    override func sesCikar() {
+        print("HAV HAV")
+    }
+}
+
+
+
+var hayvan = Hayvan()
+var memeli = Memeli()
+var kedi = Kedi()
+var kopek3 = Kopek3()
+
+hayvan.sesCikar()
+memeli.sesCikar()
+kedi.sesCikar()
+kopek3.sesCikar()
+
+//Nesnelerin tip dönüşümleri
+// is, as, as!, as?
+
+// is : (Type Checking) Tip kontrolü için kullanılır.
+// as : (Upcasting) Bir tipi başka bir tipe dönüştürmek için kullanılır.
+// as! : (Force Downcasting) Bir tipi başka bir tipe dönüştürmek için kullanılır. Dönüşüm sırasında başarısız olursa hata, başarılı ise değeri dönüştürür.
+// as? : (For Optional Downcasting) Dönüşüm sırasında optional bir veri geliyorsa. Dönüşüm sırasında başarısız olursa nil, başarılı ise değeri dönüştürür.
+
+/* let topkapi:Saray = Saray(kuleSayisi: 1, pencereSayisi: 300)
+if topkapi is Saray {
+    print("Bu bir Saraydır!")
+}else {
+    print("Bu bir Saray değildir!")
+}
+*/
+
+// Downcasting - Upcasting (Kalıtım ilişkisi olmalı)
+// Ev superclass, Saray ve Villa subclass olduğu durumda ;
+// Ev in Saraya ve Villaya dönüşmesi : Downcasting
+// Sarayın veya Villanın Ev e dönüşmesi : Upcasting
+// Saray Villaya veya Villa Saraya dönüşemez. Çünkü aralarında kalıtım ilişkisi yoktur.
+
+//Upcasting
+var ev = Saray(kuleSayisi: 4, pencereSayisi: 100) as Ev
+
+//Downcasting
+var saray = Ev(pencereSayisi: 5) as? Saray
+ 
+
+// Protocol : kalıtım gibi : ile bir sınıftan miras alıyoruz fakat kalıtımdan farkı protocol de miras aldığımız sınıfın metotlarını da yazmak zorundayız.
+// Bir diğer farkı ise kalıtımda , diyerek başka sınıflardan miras alamıyorduk. Protocol de alabiliyoruz.
+
+protocol MyProtocol {
+    var degisken:Int {get set} // get özelliği ile veri aktaracağız, set özelliği ile veriyi okuyacağız. get zorunlu.
+    
+    func metod1()
+    func metod2() -> String // {} kullanmak zorunda kalmıyoruz. Çünkü bu protocol ü  bir sınıfa eklediğim zaman otomatik olarak oluşacak.
+}
+
+class ClassA : MyProtocol { //conform et diye uyarı geliyorsa protocol de ki değişken ve metotları eklemediğimiz anlamına gelir.
+    var degisken: Int = 10
+    func metod1() {
+        print("Metod1 çalıştı")
+    }
+    func metod2() -> String {
+        return "Metod2 çalıştı."
+    }
+}
+
+var a = ClassA()
+
+print(a.degisken)
+a.metod1()
+print(a.metod2())
+
+//Extension : var olan yapıları genişletmek,yeni metotlar yazmak
+// Kotlin de infix fonk olarak geçiyor.
+// extension ı sınıfı bölmek içinde kullanabiliriz. sınıfı bölerek belirli özellikleri ait metotları yazabiliriz.
+
+extension Int {
+    func carp(sayi:Int) -> Int {
+        return self * sayi // self burada Int i temsil ediyor.
+    }
+}
+
+var x = 3.carp(sayi: 10) // burada self 3 oluyor.
+print(x)
+
+// Closure
+
+var ifade = { // değişken gibi başlayıp {} kullandık. Süslü parantez içine eşitlik sağlıyor yani çalıştırdı.
+    print("Closure kullanımı")
+}
+
+ifade() // sanki fonk muş gibi çalıştırabiliyoruz. 
