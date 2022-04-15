@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Henüz krediniz yok!"; ObjectID = "2Qp-YC-F2U"; */
+"2Qp-YC-F2U.text" = "Henüz krediniz yok!";
+
+/* Class = "UILabel"; text = "1.234,71 ₺"; ObjectID = "3At-N8-tXd"; */
+"3At-N8-tXd.text" = "1.234,71 ₺";
+
+/* Class = "UIButton"; configuration.title = "Ödemeler"; ObjectID = "4JA-wt-21f"; */
+"4JA-wt-21f.configuration.title" = "Ödemeler";
+
+/* Class = "UILabel"; text = "21.309,54 ₺"; ObjectID = "6Rw-kx-BIk"; */
+"6Rw-kx-BIk.text" = "21.309,54 ₺";
+
+/* Class = "UIButton"; configuration.title = "Döviz"; ObjectID = "7Re-d9-OOb"; */
+"7Re-d9-OOb.configuration.title" = "Döviz";
+
+/* Class = "UIButton"; configuration.title = "Kredi Kartı"; ObjectID = "EkO-fL-mZh"; */
+"EkO-fL-mZh.configuration.title" = "Kredi Kartı";
+
+/* Class = "UIButton"; configuration.title = "Harcama Dağılımı"; ObjectID = "HuD-4V-LF6"; */
+"HuD-4V-LF6.configuration.title" = "Harcama Dağılımı";
+
+/* Class = "UIButton"; configuration.title = "Ekstre"; ObjectID = "TBZ-L4-dfh"; */
+"TBZ-L4-dfh.configuration.title" = "Ekstre";
+
+/* Class = "UILabel"; text = "Kullanılabilir Limit"; ObjectID = "WHR-oT-ruO"; */
+"WHR-oT-ruO.text" = "Kullanılabilir Limit";
+
+/* Class = "UILabel"; text = "Şube : MİLAS"; ObjectID = "Wo6-pc-3AT"; */
+"Wo6-pc-3AT.text" = "Şube : MİLAS";
+
+/* Class = "UIButton"; configuration.title = "Vadesiz Hesap"; ObjectID = "a3S-Hl-vSG"; */
+"a3S-Hl-vSG.configuration.title" = "Vadesiz Hesap";
+
+/* Class = "UIButton"; configuration.title = "Ana Sayfa"; ObjectID = "ais-xN-RGc"; */
+"ais-xN-RGc.configuration.title" = "Ana Sayfa";
+
+/* Class = "UIButton"; configuration.title = "Krediler"; ObjectID = "fSL-Eq-GJZ"; */
+"fSL-Eq-GJZ.configuration.title" = "Krediler";
+
+/* Class = "UIButton"; configuration.title = "Havale / EFT"; ObjectID = "pmq-vu-v8v"; */
+"pmq-vu-v8v.configuration.title" = "Havale / EFT";
+
+/* Class = "UIButton"; configuration.title = "Başvurular"; ObjectID = "x3P-G2-FtM"; */
+"x3P-G2-FtM.configuration.title" = "Başvurular";
+
+/* Class = "UILabel"; text = "Kullanılabilir Bakiye"; ObjectID = "xY6-54-ikV"; */
+"xY6-54-ikV.text" = "Kullanılabilir Bakiye";
