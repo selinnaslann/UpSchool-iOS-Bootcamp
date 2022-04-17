@@ -25,13 +25,35 @@ d.dikdörtgenCevre(kk: 10, uk: 20)
 
 
 class Soru3{
+    func faktoriyelHesaplama (sayi:Int) -> Int {
+        var sonuc = 1
+        for i in 1...sayi {
+            sonuc = sonuc * i
+        }
+        return sonuc
+    }
     
 }
 
+let soru3 = Soru3()
+let gelenSonuc3 = soru3.faktoriyelHesaplama(sayi: 4)
+print("Faktöriyel : \(gelenSonuc3)")
 
 class Soru4{
+    func kelimeAdetBulma (kelime:String,harf:Character) {
+        var sonuc = 0
+        for k in kelime {
+            if k == harf {
+                sonuc+=1
+            }
+        }
+        print("Harf sayısı : \(sonuc)")
+    }
     
 }
+
+let soru4 = Soru4()
+soru4.kelimeAdetBulma(kelime: "Selin", harf: "e")
 
 class Soru5{
     func icAciToplam(n:Int) -> Int {
