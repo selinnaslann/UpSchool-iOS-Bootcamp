@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OJs-LY-E1o">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browse-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Odev6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Uber-Eats-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OAb-JS-nmD">
+                                <rect key="frame" x="107" y="44" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0Ho-Oi-sHb"/>
+                                    <constraint firstAttribute="height" constant="100" id="2aa-OK-vdo"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Food, groceries, drinks, etc" translatesAutoresizingMaskIntoConstraints="NO" id="ute-cU-a8N">
+                                <rect key="frame" x="0.0" y="126" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fg5-XX-r2g"/>
+                                    <constraint firstAttribute="width" constant="414" id="lS9-ui-hZF"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQi-X1-tBJ">
+                                <rect key="frame" x="20" y="185" width="142" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pBl-cG-9uq">
+                                <rect key="frame" x="0.0" y="211" width="414" height="602"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cff-lu-R1f">
+                                    <size key="itemSize" width="180" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kategoriHucre" id="0Al-f4-YZh" customClass="KategorilerCollectionViewCell" customModule="Odev6" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="25I-vj-b90">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="eUv-W5-nAH">
+                                                    <rect key="frame" x="-30" y="0.0" width="240" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-tH-ckh">
+                                                    <rect key="frame" x="69" y="117.5" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mfs-tH-ckh" secondAttribute="bottom" constant="12" id="EDD-3f-fMd"/>
+                                                <constraint firstItem="mfs-tH-ckh" firstAttribute="centerX" secondItem="25I-vj-b90" secondAttribute="centerX" id="jV6-j7-PVt"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="kategoriAdiLabel" destination="mfs-tH-ckh" id="ihX-Tq-Um7"/>
+                                            <outlet property="kategoriImageView" destination="eUv-W5-nAH" id="ea8-kC-cDa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OAb-JS-nmD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7I8-UH-bxM"/>
+                            <constraint firstItem="ute-cU-a8N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Ab-UF-AxZ"/>
+                            <constraint firstItem="ute-cU-a8N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="82" id="A3T-GJ-jdM"/>
+                            <constraint firstItem="pBl-cG-9uq" firstAttribute="top" secondItem="VQi-X1-tBJ" secondAttribute="bottom" id="ERO-UA-IZU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pBl-cG-9uq" secondAttribute="bottom" id="IlP-hj-80m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VQi-X1-tBJ" secondAttribute="trailing" symbolic="YES" id="Kho-8v-TI0"/>
+                            <constraint firstItem="ute-cU-a8N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OIn-fb-JPL"/>
+                            <constraint firstItem="OAb-JS-nmD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RXl-cy-U6j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pBl-cG-9uq" secondAttribute="trailing" id="aE1-cq-3wc"/>
+                            <constraint firstItem="VQi-X1-tBJ" firstAttribute="top" secondItem="ute-cU-a8N" secondAttribute="bottom" constant="15" id="eI3-A9-YGE"/>
+                            <constraint firstItem="ute-cU-a8N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hSM-sg-nRN"/>
+                            <constraint firstItem="pBl-cG-9uq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iVc-j1-4LQ"/>
+                            <constraint firstItem="VQi-X1-tBJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wsH-7o-a4A"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Browse" image="manage_search_FILL0_wght400_GRAD0_opsz48" selectedImage="manage_search_FILL0_wght400_GRAD0_opsz48" id="njL-XG-WTc">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="9"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="kategorilerCollectionView" destination="pBl-cG-9uq" id="iyG-DU-3kc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="-204"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="R81-BG-uTM">
+            <objects>
+                <viewController id="1DL-HQ-CxG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QJW-qU-4BO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction_FILL1_wght400_GRAD0_opsz48" translatesAutoresizingMaskIntoConstraints="NO" id="YaQ-W8-wBj">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VtL-8f-frJ"/>
+                                    <constraint firstAttribute="height" constant="100" id="lFW-Wu-pGh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-zo-77o">
+                                <rect key="frame" x="93" y="530" width="228.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oAC-ig-c83"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iyv-zo-77o" firstAttribute="centerX" secondItem="QJW-qU-4BO" secondAttribute="centerX" id="4Zt-dp-PEp"/>
+                            <constraint firstItem="iyv-zo-77o" firstAttribute="top" secondItem="YaQ-W8-wBj" secondAttribute="bottom" constant="32" id="4nB-We-fRq"/>
+                            <constraint firstItem="iyv-zo-77o" firstAttribute="centerX" secondItem="QJW-qU-4BO" secondAttribute="centerX" id="EuX-cM-a2a"/>
+                            <constraint firstItem="YaQ-W8-wBj" firstAttribute="centerY" secondItem="QJW-qU-4BO" secondAttribute="centerY" id="JDc-Rj-NoR"/>
+                            <constraint firstItem="YaQ-W8-wBj" firstAttribute="centerX" secondItem="QJW-qU-4BO" secondAttribute="centerX" id="uke-BW-Xin"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_FILL1_wght400_GRAD0_opsz48" selectedImage="home_FILL1_wght400_GRAD0_opsz48" id="yrm-PG-jmZ">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y43-Qv-aru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="548"/>
+        </scene>
+        <!--Carts-->
+        <scene sceneID="pOy-ry-2El">
+            <objects>
+                <viewController id="Bo3-6y-VY5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G43-3o-T7X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction_FILL1_wght400_GRAD0_opsz48" translatesAutoresizingMaskIntoConstraints="NO" id="unA-rZ-vhC">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="U83-pz-9d0"/>
+                                    <constraint firstAttribute="width" constant="100" id="e6I-QI-JJo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rg2-5l-Kfk">
+                                <rect key="frame" x="93" y="530" width="228.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WpY-by-v98"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="unA-rZ-vhC" firstAttribute="centerX" secondItem="G43-3o-T7X" secondAttribute="centerX" id="Hfi-gE-ymu"/>
+                            <constraint firstItem="Rg2-5l-Kfk" firstAttribute="centerX" secondItem="G43-3o-T7X" secondAttribute="centerX" id="Lze-6I-tyO"/>
+                            <constraint firstItem="Rg2-5l-Kfk" firstAttribute="top" secondItem="unA-rZ-vhC" secondAttribute="bottom" constant="32" id="b48-Hd-efk"/>
+                            <constraint firstItem="unA-rZ-vhC" firstAttribute="centerY" secondItem="G43-3o-T7X" secondAttribute="centerY" id="cRE-ll-i0c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Carts" image="shopping_cart_FILL1_wght400_GRAD0_opsz48" selectedImage="shopping_cart_FILL1_wght400_GRAD0_opsz48" id="f5l-dZ-CVL">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dui-dv-Bqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="822"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="YKO-yP-Aen">
+            <objects>
+                <viewController id="Fxx-dk-hga" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdH-5j-lgN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction_FILL1_wght400_GRAD0_opsz48" translatesAutoresizingMaskIntoConstraints="NO" id="HnU-nT-G9u">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="c3M-Xc-d8i"/>
+                                    <constraint firstAttribute="width" constant="100" id="eiG-8i-tM1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ps-Xz-bYy">
+                                <rect key="frame" x="93" y="530" width="228.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bV0-F2-3Ac"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HnU-nT-G9u" firstAttribute="centerY" secondItem="fdH-5j-lgN" secondAttribute="centerY" id="Lbj-WY-CP8"/>
+                            <constraint firstItem="5ps-Xz-bYy" firstAttribute="centerX" secondItem="fdH-5j-lgN" secondAttribute="centerX" id="OGl-Ip-uW5"/>
+                            <constraint firstItem="5ps-Xz-bYy" firstAttribute="top" secondItem="HnU-nT-G9u" secondAttribute="bottom" constant="32" id="Wko-SX-aUx"/>
+                            <constraint firstItem="HnU-nT-G9u" firstAttribute="centerX" secondItem="fdH-5j-lgN" secondAttribute="centerX" id="ie3-QO-jtM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="person_FILL1_wght400_GRAD0_opsz48" selectedImage="person_FILL1_wght400_GRAD0_opsz48" id="mQo-1P-2cK">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91Y-gc-mCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2363" y="688"/>
+        </scene>
+        <!--Grocery-->
+        <scene sceneID="zay-Qj-Huq">
+            <objects>
+                <viewController id="fRu-jD-zUN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EZR-JH-nYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="construction_FILL1_wght400_GRAD0_opsz48" translatesAutoresizingMaskIntoConstraints="NO" id="7EF-yc-vu7">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Vaf-i1-NIu"/>
+                                    <constraint firstAttribute="width" constant="100" id="oEc-uU-twZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Under Construction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdy-Tj-1O8">
+                                <rect key="frame" x="93" y="530" width="228.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y5k-t1-47q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7EF-yc-vu7" firstAttribute="centerX" secondItem="EZR-JH-nYd" secondAttribute="centerX" id="4Bm-EO-hms"/>
+                            <constraint firstItem="7EF-yc-vu7" firstAttribute="centerY" secondItem="EZR-JH-nYd" secondAttribute="centerY" id="DGV-8a-TfG"/>
+                            <constraint firstItem="Fdy-Tj-1O8" firstAttribute="centerX" secondItem="EZR-JH-nYd" secondAttribute="centerX" id="d9s-wn-4CS"/>
+                            <constraint firstItem="Fdy-Tj-1O8" firstAttribute="top" secondItem="7EF-yc-vu7" secondAttribute="bottom" constant="32" id="onx-zw-GPf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Grocery" image="shopping_basket_FILL1_wght400_GRAD0_opsz48" selectedImage="shopping_basket_FILL1_wght400_GRAD0_opsz48" id="vWY-Wk-YWr">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="9"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ll-Id-vZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="66"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hs3-5y-s0g">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OJs-LY-E1o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="E0N-Ua-4gk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zbZ-iT-y5m"/>
+                        <segue destination="fRu-jD-zUN" kind="relationship" relationship="viewControllers" id="mRB-jd-oXl"/>
+                        <segue destination="1DL-HQ-CxG" kind="relationship" relationship="viewControllers" id="T1c-zI-qfH"/>
+                        <segue destination="Bo3-6y-VY5" kind="relationship" relationship="viewControllers" id="phU-Mf-Z41"/>
+                        <segue destination="Fxx-dk-hga" kind="relationship" relationship="viewControllers" id="tXc-bF-hqi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EjZ-PP-Uyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Uber-Eats-Logo" width="3840" height="2160"/>
+        <image name="construction_FILL1_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <image name="home_FILL1_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <image name="manage_search_FILL0_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <image name="person_FILL1_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <image name="pizza" width="1023" height="682"/>
+        <image name="shopping_basket_FILL1_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <image name="shopping_cart_FILL1_wght400_GRAD0_opsz48" width="48" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
