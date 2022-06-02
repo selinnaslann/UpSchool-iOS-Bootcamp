@@ -10,6 +10,7 @@ import Kingfisher
 
 class YemekDetayVC: UIViewController {
 
+    @IBOutlet weak var sepetButton: UIButton!
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var labelStepper: UILabel!
     @IBOutlet weak var yemekFiyat: UILabel!
@@ -32,12 +33,25 @@ class YemekDetayVC: UIViewController {
         }
         
         YemekDetayRouter.createModule(ref: self)
+        
+        
+        let appearance = UINavigationBarAppearance()
+        
+        appearance.backgroundColor = UIColor(named: "anaRenk")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "yaziRenk")!,NSAttributedString.Key.font: UIFont(name: "AdventPro-Light", size: 22)!]
+       
+        navigationController?.navigationBar.isTranslucent = true
+    
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     @IBAction func sepeteEkleButton(_ sender: Any) {
         if let y = yemek {
             yemekDetayPresenterNesnesi?.ekle(yemek_adi: y.yemek_adi!, yemek_resim_adi: y.yemek_resim_adi!, yemek_fiyat: Int(y.yemek_fiyat!)! , yemek_siparis_adet: Int(labelStepper.text!)!, kullanici_adi: "Selin")
         }
+    
     }
     
     @IBAction func stepperDegisimKontrol(_ sender: UIStepper) {

@@ -25,6 +25,17 @@ class SepetVC: UIViewController {
         sepetYemeklerTableView.dataSource = self
         
         
+        let appearance = UINavigationBarAppearance()
+        
+        appearance.backgroundColor = UIColor(named: "anaRenk")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "yaziRenk")!,NSAttributedString.Key.font: UIFont(name: "AdventPro-Light", size: 22)!]
+       
+        navigationController?.navigationBar.isTranslucent = true
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

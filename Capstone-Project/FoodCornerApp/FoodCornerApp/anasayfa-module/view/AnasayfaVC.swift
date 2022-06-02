@@ -16,6 +16,8 @@ class AnasayfaVC : UIViewController {
     
     var anasayfaPresenterNesnesi:ViewToPresenterAnasayfaProtocol?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,16 @@ class AnasayfaVC : UIViewController {
         
         anasayfaPresenterNesnesi?.listele()
         
+        let appearance = UINavigationBarAppearance()
+        
+        appearance.backgroundColor = UIColor(named: "anaRenk")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "yaziRenk")!,NSAttributedString.Key.font: UIFont(name: "AdventPro-Light", size: 22)!]
+       
+        navigationController?.navigationBar.isTranslucent = true
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }
 

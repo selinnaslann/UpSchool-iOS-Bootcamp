@@ -37,6 +37,7 @@
 		173D1E312842181300200F52 /* YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D1E302842181300200F52 /* YemeklerCevap.swift */; };
 		173D1E332842531000200F52 /* Sepet_YemeklerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D1E322842531000200F52 /* Sepet_YemeklerCevap.swift */; };
 		173D1E362842B67000200F52 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 173D1E352842B67000200F52 /* Kingfisher */; };
+		17E3F7E12848FBDC00886568 /* AdventPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E3F7E02848FBDC00886568 /* AdventPro-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		173D1E2E2841658200200F52 /* AnasayfaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaPresenter.swift; sourceTree = "<group>"; };
 		173D1E302842181300200F52 /* YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerCevap.swift; sourceTree = "<group>"; };
 		173D1E322842531000200F52 /* Sepet_YemeklerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sepet_YemeklerCevap.swift; sourceTree = "<group>"; };
+		17E3F7E02848FBDC00886568 /* AdventPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdventPro-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		173D1D3B283ED19400200F52 /* FoodCornerApp */ = {
 			isa = PBXGroup;
 			children = (
+				17E3F7DF2848FBB700886568 /* Fonts */,
 				173D1D3C283ED19400200F52 /* AppDelegate.swift */,
 				173D1D3E283ED19400200F52 /* SceneDelegate.swift */,
 				173D1D78284029E800200F52 /* anasayfa-module */,
@@ -357,6 +360,14 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		17E3F7DF2848FBB700886568 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				17E3F7E02848FBDC00886568 /* AdventPro-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +481,7 @@
 				173D1D49283ED19500200F52 /* LaunchScreen.storyboard in Resources */,
 				173D1D46283ED19500200F52 /* Assets.xcassets in Resources */,
 				173D1D44283ED19400200F52 /* Main.storyboard in Resources */,
+				17E3F7E12848FBDC00886568 /* AdventPro-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,11 +705,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HRL326LPR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodCornerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -720,11 +734,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8HRL326LPR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodCornerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
