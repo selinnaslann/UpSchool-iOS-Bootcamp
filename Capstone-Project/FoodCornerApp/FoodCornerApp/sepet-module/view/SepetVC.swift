@@ -11,6 +11,7 @@ import Kingfisher
 class SepetVC: UIViewController {
 
     
+    @IBOutlet weak var toplamTutarLabel: UILabel!
     @IBOutlet weak var sepetYemeklerTableView: UITableView!
     
     var sepetPresenterNesnesi:ViewToPresenterSepetProtocol?
@@ -18,6 +19,8 @@ class SepetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         SepetRouter.createModule(ref: self)
         
@@ -41,7 +44,6 @@ class SepetVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         sepetPresenterNesnesi?.sepetiYukle(kullanici_adi: "Selin")
     }
-    
 }
 
 extension SepetVC : PresenterToViewSepetProtocol {
@@ -49,6 +51,11 @@ extension SepetVC : PresenterToViewSepetProtocol {
         self.sepetYemeklerListe = sepetYemeklerListesi
         DispatchQueue.main.async {
             self.sepetYemeklerTableView.reloadData()
+            var total = 0
+            for i in self.sepetYemeklerListe {
+                total += Int(i.yemek_fiyat!)! * Int(i.yemek_siparis_adet!)!
+            }
+            self.toplamTutarLabel.text = "Toplam tutar: \(String(describing: total))" + " ₺"
         }
     }
 }

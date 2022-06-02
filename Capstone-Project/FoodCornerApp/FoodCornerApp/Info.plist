@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>AdventPro-Light.ttf</string>
+		<string>DancingScript-VariableFont_wght.ttf</string>
+		<string>PressStart2P-Regular.ttf</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

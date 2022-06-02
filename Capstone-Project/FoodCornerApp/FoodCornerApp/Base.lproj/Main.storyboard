@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PressStart2P-Regular.ttf">
+            <string>PressStart2P-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Sepetim-->
         <scene sceneID="0ni-gZ-Q3T">
@@ -34,19 +39,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XU4-Sw-B7t">
                                                             <rect key="frame" x="147.5" y="16.5" width="78" height="125.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shN-Bc-hgD">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ayran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shN-Bc-hgD">
                                                                     <rect key="frame" x="0.0" y="0.0" width="78" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="361-2j-o3P">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="361-2j-o3P">
                                                                     <rect key="frame" x="0.0" y="48.5" width="78" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-bK-WTk">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Adet : 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdk-bK-WTk">
                                                                     <rect key="frame" x="0.0" y="97" width="78" height="28.5"/>
                                                                     <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="25"/>
                                                                     <nil key="textColor"/>
@@ -89,20 +94,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Az-3r-1gr">
+                                <rect key="frame" x="181" y="752.5" width="52" height="28.5"/>
+                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ciM-cl-MaO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aqR-1L-EVL" firstAttribute="leading" secondItem="ciM-cl-MaO" secondAttribute="leading" id="LhL-QQ-4Zu"/>
+                            <constraint firstItem="ciM-cl-MaO" firstAttribute="bottom" secondItem="9Az-3r-1gr" secondAttribute="bottom" constant="32" id="VrI-H6-ouN"/>
                             <constraint firstItem="ciM-cl-MaO" firstAttribute="bottom" secondItem="aqR-1L-EVL" secondAttribute="bottom" constant="88" id="YH8-xg-TeD"/>
                             <constraint firstItem="ciM-cl-MaO" firstAttribute="trailing" secondItem="aqR-1L-EVL" secondAttribute="trailing" id="a9J-oa-tjq"/>
                             <constraint firstItem="aqR-1L-EVL" firstAttribute="top" secondItem="ciM-cl-MaO" secondAttribute="top" id="nuS-wS-Cod"/>
+                            <constraint firstItem="9Az-3r-1gr" firstAttribute="centerX" secondItem="MUu-mu-fSW" secondAttribute="centerX" id="raj-x2-G7e"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="gXy-CJ-o04"/>
                     <navigationItem key="navigationItem" title="Sepetim" id="2qP-q1-m0X"/>
                     <connections>
                         <outlet property="sepetYemeklerTableView" destination="aqR-1L-EVL" id="qVd-Df-Qgn"/>
+                        <outlet property="toplamTutarLabel" destination="9Az-3r-1gr" id="bG0-ym-kaj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uhf-cW-UyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -110,6 +124,53 @@
             <point key="canvasLocation" x="-113.04347826086958" y="857.8125"/>
         </scene>
         <!--Anasayfa-->
+        <scene sceneID="WAe-hQ-OMA">
+            <objects>
+                <viewController id="Lr7-3R-Bz5" customClass="GirisSayfasiVC" customModule="FoodCornerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9De-TL-FHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMu-qL-9Mq">
+                                <rect key="frame" x="113" y="570.5" width="188" height="42.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ÜRÜNLERE GİT">
+                                    <fontDescription key="titleFontDescription" name="GillSans-Light" family="Gill Sans" pointSize="25"/>
+                                    <color key="baseBackgroundColor" name="buttonColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="55"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="wfx-Rc-ERU" kind="show" id="RYN-pX-rZB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodCorner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoT-6R-Sk8">
+                                <rect key="frame" x="47" y="288" width="320" height="32"/>
+                                <fontDescription key="fontDescription" name="PressStart2P-Regular" family="Press Start 2P" pointSize="32"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ba5-rW-8mD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AoT-6R-Sk8" firstAttribute="centerX" secondItem="9De-TL-FHE" secondAttribute="centerX" id="Zvy-8j-hi5"/>
+                            <constraint firstItem="QMu-qL-9Mq" firstAttribute="centerX" secondItem="9De-TL-FHE" secondAttribute="centerX" id="aPN-wl-vcq"/>
+                            <constraint firstItem="AoT-6R-Sk8" firstAttribute="top" secondItem="Ba5-rW-8mD" secondAttribute="top" constant="200" id="fI5-gS-jjG"/>
+                            <constraint firstItem="Ba5-rW-8mD" firstAttribute="bottom" secondItem="QMu-qL-9Mq" secondAttribute="bottom" constant="200" id="oUj-AM-gXj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anasayfa" id="Q4a-to-Sz5"/>
+                    <connections>
+                        <outlet property="isimLabel" destination="AoT-6R-Sk8" id="O7M-Fa-q1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxs-lT-Aa0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="52"/>
+        </scene>
+        <!--Yemekler-->
         <scene sceneID="dFX-zP-cWG">
             <objects>
                 <viewController id="wfx-Rc-ERU" customClass="AnasayfaVC" customModule="FoodCornerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,7 +253,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="lDy-FJ-1mi"/>
-                    <navigationItem key="navigationItem" title="Anasayfa" id="lDq-Az-oOE"/>
+                    <navigationItem key="navigationItem" title="Yemekler" id="lDq-Az-oOE"/>
                     <connections>
                         <outlet property="yemeklerTableView" destination="oYx-Nm-wSL" id="pTe-kk-QFK"/>
                         <segue destination="Gwo-pw-LRD" kind="show" identifier="toDetay" id="C1D-DE-dtQ"/>
@@ -200,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oq5-BY-wsH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757" y="52"/>
+            <point key="canvasLocation" x="1452" y="52"/>
         </scene>
         <!--Yemek Detay-->
         <scene sceneID="BOm-O2-6f5">
@@ -274,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB1-SG-7LY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="52"/>
+            <point key="canvasLocation" x="2410" y="52"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PTU-rd-6QD">
@@ -305,7 +366,7 @@
                         <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wfx-Rc-ERU" kind="relationship" relationship="rootViewController" id="ola-HP-A7F"/>
+                        <segue destination="Lr7-3R-Bz5" kind="relationship" relationship="rootViewController" id="VcL-3w-VE8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RC-eF-ZSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -333,12 +394,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Xc-3R-58F"/>
+        <segue reference="Pcf-Gr-Ixe"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ayran" width="256" height="256"/>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="buttonColor">
             <color red="0.30980392156862746" green="0.43529411764705883" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
